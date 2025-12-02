@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Excel Search Tool</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- SheetJS Library -->
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>Upload Excel & Search by Name</h2>
+
+    <!-- Upload Excel File -->
+    <input type="file" id="excelFile" accept="C:\Users\Election\Desktop\Asokan\1\aso.xlsx" />
+
+    <!-- Search Bar -->
+    <input type="text" id="searchInput" placeholder="Search by name..." onkeyup="searchData()" />
+
+    <!-- Data Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>ID No</th>
+                <th>Mobile No</th>
+            </tr>
+        </thead>
+        <tbody id="resultBody"></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
